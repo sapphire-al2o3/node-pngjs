@@ -28,7 +28,7 @@ fs.readdir(__dirname + '/img/', function(err, files) {
                         }
                     }
                 }
-
+console.log(file);
                 this.pack()
                     .pipe(fs.createWriteStream(__dirname + '/out/' + file));
 
