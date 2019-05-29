@@ -1,6 +1,6 @@
 
 var fs = require('fs'),
-    PNG = require('pngjs').PNG;
+    PNG = require('../../lib/png').PNG;
 
 
 fs.readdir(__dirname + '/img/', function(err, files) {
@@ -28,7 +28,7 @@ fs.readdir(__dirname + '/img/', function(err, files) {
                         }
                     }
                 }
-console.log(file);
+                console.log(file);
                 this.pack()
                     .pipe(fs.createWriteStream(__dirname + '/out/' + file));
 
